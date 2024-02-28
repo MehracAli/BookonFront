@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookon - Home</title>
+    <link rel="stylesheet" href="./assets/bootstrap/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div id="header-wrapper">
+            <div id="logo">
+                <a href="#">
+                    <img id="logo-img" src="./assets/images/header/bookon-logo.png" alt="">
+                </a>
+            </div>
+            <nav id="nav-bar" class="row flex-column">
+                <div id="nav-head" class="row flex-column justify-content-between">
+                    <a class="nav-item nav-item-active" href="./home.html">
+                        <i class="bi bi-house"></i>
+                        <span>Home</span>
+                    </a>
+                    <div class="nav-item" id="create-nav">
+                        <i class="bi bi-plus-circle"></i>
+                        <span>Create Post</span>
+                        <div id="create-drop">
+                            <h6>New Post</h6>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="bi bi-chat-left-quote"></i>
+                                        <span>Share Quote</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="bi bi-chat-left-dots"></i>
+                                        <span>Share Update</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="bi bi-chat-left-text"></i>
+                                        <span>Write Review</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-envelope"></i>
+                        <span>Messages</span>
+                    </a>
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-music-note-list"></i>
+                        <span>Music</span>
+                    </a>
+                    <a class="nav-item" href="./book.html">
+                        <i class="bi bi-journal-bookmark"></i>
+                        <span>Book</span>
+                    </a>
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-bookmark"></i>
+                        <span>Saves</span>
+                    </a>
+                    <a class="nav-item profile-nav-item" href="./profile.html">
+                        <div id="profile-img">
+                            <img src="./assets/images/user-profiles/unnamed.jpg" alt="">
+                        </div>
+                        <span>Profile</span>
+                    </a>
+                </div>
+                <div id="nav-foot" class="row flex-column">
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section id="home">
+            <div id="landing-nav">
+                <div class="landing-nav-item">
+                    <a href="#">
+                        <span>Followings</span>
+                    </a>
+                </div>
+                <div class="landing-nav-item">
+                    <a href="#">
+                        <span>For You</span>
+                    </a>
+                </div>
+                <div class="landing-nav-item">
+                    <a href="#">
+                        <span>Popular</span>
+                    </a>
+                </div>
+            </div>
+            <div id="content">
+                <div class="post quote-post">
+                    <div class="post-head">
+                        <div class="post-owner">
+                            <div class="post-owner-img">
+                                <img src="./assets/images/user-profiles/unnamed.jpg" alt="">
+                            </div>
+                            <div class="post-owner-info">
+                                <div class="post-owner-name"><a href="./profile.html">Mehraj Mammadov</a></div>
+                                <div class="post-owner-username"><a href="./profile.html">@MehrajAli</a></div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <i class="bi bi-three-dots"></i>
+                            <div class="dots-menu">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="bi bi-link-45deg"></i>Copy Url
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="bi bi-envelope-plus"></i>Send as Message
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="bi bi-flag"></i>Report
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <div class="paragraph">
+                            <p>
+                                Sevdiğimiz insanlar hakkında bilmek istemediğimiz o kadar çok şey var ki.
+                            </p>
+                        </div>
+                        <div class="book-info">
+                            <div class="book-img">
+                                <img src="./assets/images/books/56586_77433_1601498302.webp" alt="">
+                            </div>
+                            <div class="name-auth">
+                                <div class="book-name">
+                                    <a href="#">Dövüş Kulübü</a>
+                                </div>
+                                <div class="book-auth">
+                                    <a href="#">Chuck Palahniuk</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-foot">
+                        <div class="post-foot-left">
+                            <div class="post-star post-foot-item">
+                                <i class="bi bi-star not-starred"></i>
+                                <i class="bi bi-star-fill starred"></i>
+                                <span class="star-count">10</span>
+                            </div>
+                            <div class="comment post-foot-item">
+                                <i class="bi bi-chat-left"></i>
+                                <span>10</span>
+                            </div>
+                            <div class="share post-foot-item">
+                                <i class="bi bi-share"></i>
+                                <span>10</span>
+                            </div>
+                        </div>
+                        <div class="post-foot-right">
+                            <div class="statistics post-foot-item">
+                                <i class="bi bi-bar-chart-line"></i>
+                                <span>10</span>
+                            </div>
+                            <div class="statistics post-foot-item">
+                                <i class="bi bi-bookmark"></i>
+                                <span>10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="side-bar" class="col-5">
+            <div id="side-bar-wrapper">
+                <div id="search">
+                    <i class="bi bi-search"></i>
+                    <input id="search-input" type="search">
+                    <div id="search-drop">
+                        <ul>
+                            <li><a href="">Text1</a></li>
+                            <li><a href="">Text2</a></li>
+                            <li><a href="">Text3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="tags">
+                    <ul>
+                        <li><a href="#">Edebiyyat</li></a>
+                        <li><a href="#">Edebiyyat</a></li>
+                        <li><a href="#">Edebiyyat</a></li>
+                        <li><a href="#">Edebiyyat</a></li>
+                        <li><a href="#">Edebiyyat</a></li>
+                    </ul>
+                    
+                </div>
+                <div id="suggests"></div>
+            </div>
+        </section>
+    </main>
+    <div id="share-drop">
+        <div id="share-exit">
+            <button id="share-exit-btn"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div id="share-link">
+            <input id="share-link-input" type="text" disabled>
+            <button id="copy-link-btn" type="button">Copy</button>
+        </div>
+        <div id="share-btns">
+            <a class="in-post share-btn" target="_blank">
+                <i class="bi bi-box-arrow-up"></i>
+            </a>
+            <a class="whatsapp share-btn" target="_blank">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+            <a class="facebook share-btn" target="_blank">
+                <i class="bi bi-facebook"></i>
+            </a>
+        </div>
+    </div>
+    <div id="curtain"></div>
+</body>
+<script src="./assets/js/header.js"></script>
+<script src="./assets/js/sidabar.js"></script>
+<script src="./assets/js/post.js"></script>
+</html>

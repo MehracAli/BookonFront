@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookOn</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div id="header-wrapper">
+            <div id="logo">
+                <a href="#">
+                    <img id="logo-img" src="./assets/images/header/bookon-logo.png" alt="">
+                </a>
+            </div>
+            <nav id="nav-bar" class="row flex-column">
+                <div id="nav-head" class="row flex-column justify-content-between">
+                    <a class="nav-item nav-item-active" href="./home.html">
+                        <i class="bi bi-house"></i>
+                        <span>Home</span>
+                    </a>
+                    <div class="nav-item" id="create-nav">
+                        <i class="bi bi-plus-circle"></i>
+                        <span>Create Post</span>
+                        <div id="create-drop">
+                            <h6>New Post</h6>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="bi bi-chat-left-quote"></i>
+                                        <span>Share Quote</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="bi bi-chat-left-dots"></i>
+                                        <span>Share Update</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="bi bi-chat-left-text"></i>
+                                        <span>Write Review</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-envelope"></i>
+                        <span>Messages</span>
+                    </a>
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-music-note-list"></i>
+                        <span>Music</span>
+                    </a>
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-journal-bookmark"></i>
+                        <span>Book</span>
+                    </a>
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-bookmark"></i>
+                        <span>Saves</span>
+                    </a>
+                    <a class="nav-item profile-nav-item" href="./profile.html">
+                        <div id="profile-img">
+                            <img src="./assets/images/user-profiles/unnamed.jpg" alt="">
+                        </div>
+                        <span>Profile</span>
+                    </a>
+                </div>
+                <div id="nav-foot" class="row flex-column">
+                    <a class="nav-item" href="#">
+                        <i class="bi bi-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section id="profile">
+            <div id="profile-info">
+                <div id="info-top">
+                    <div id="main-cover"></div>
+                    <div id="main-photo">
+                        <img src="./assets/images/user-profiles/unnamed.jpg" alt="">
+                    </div>
+                </div>
+                <div id="info-bottom">
+                    <div id="edit-profile">
+                        <a href="profile-edit.html">
+                            Edit Profile
+                        </a>
+                    </div>
+                    <div id="fullname-username">
+                        <div id="fullname">Mehraj Mammadov<br> <span id="username">@MehrajAli</span></div>
+                    </div>
+                    <div id="date-info">
+                        <div class="date-info-item">
+                            <i class="bi bi-calendar4"></i>
+                            <span>21 july 1996</span>
+                        </div>
+                        <div class="date-info-item">
+                            <i class="bi bi-clock-history"></i>
+                            <span>Joined on February 26 2024</span>
+                        </div>
+                    </div>
+                    <div id="content-info">
+                        <div class="content-info-item">
+                            <span>10</span>Follows
+                        </div>
+                        <div class="content-info-item">
+                            <span>10</span>Followers
+                        </div>
+                        <div class="content-info-item">
+                            <span>10</span>Books
+                        </div>
+                        <div class="content-info-item">
+                            <span>10</span>Quotes
+                        </div>
+                        <div class="content-info-item">
+                            <span>10</span>Reviews
+                        </div>
+                    </div>
+                </div>
+                <div id="profile-shares">
+                    <div id="shares-nav">
+                        <a class="shares-nav-item shares-nav-item-active"  href="#">Wall</a>
+                        <a class="shares-nav-item" href="#">Bookshelf</a>
+                        <a class="shares-nav-item" href="#">Reviews</a>
+                        <a class="shares-nav-item" href="#">Quotes</a>
+                    </div>
+                    <div id="shares-body"></div>
+                </div>
+            </div>
+        </section>
+        <section id="side-bar" class="col-5">
+            <div id="side-bar-wrapper">
+                <div id="search">
+                    <i class="bi bi-search"></i>
+                    <input id="search-input" type="search">
+                    <div id="search-drop">
+                        <ul>
+                            <li><a href="">Text1</a></li>
+                            <li><a href="">Text2</a></li>
+                            <li><a href="">Text3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="tags">
+                    <ul>
+                        <li><a href="#">Edebiyyat</li></a>
+                        <li><a href="#">Edebiyyat</a></li>
+                        <li><a href="#">Edebiyyat</a></li>
+                        <li><a href="#">Edebiyyat</a></li>
+                        <li><a href="#">Edebiyyat</a></li>
+                    </ul>
+                    
+                </div>
+                <div id="suggests"></div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./assets/js/header.js"></script>
+<script src="./assets/js/sidabar.js"></script>
+<script src="./assets/js/profile.js"></script>
+</html>

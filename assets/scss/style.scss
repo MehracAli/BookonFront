@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    transition: 0.2s;
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance:none;
+    }
+}
+body{
+    position: relative;
+    background-color: #ffffff;
+    #main{
+        width: 75%;
+        margin-left: 25%;
+        display: flex;
+    }
+    
+    #share-drop{
+        z-index: 2;
+        display: none;
+        width: max-content;
+        padding: 10px 20px;
+        border: #d4d4d4 solid 1px;
+        background-color: white;
+        position: absolute;
+        top: 35%;
+        left: 35%;
+        #share-exit{
+            #share-exit-btn{
+                border: none;
+                background-color: white;
+                margin-bottom: 10px;
+            }
+        }
+        #share-link{
+            margin-bottom: 15px;
+            #share-link-input{
+                width: 350px;
+                padding: 5px 10px;
+                border: none;
+                // border-radius: 10px;
+                background-color: #edf6ee;
+            }
+            #copy-link-btn{
+                width: 50px;
+                padding: 5px 0;
+                color: white;
+                background-color: #128812;
+                border: none;
+                text-align: center;
+                transform: translateX(-5px);
+            }
+        }
+        #share-btns{
+            display: flex;
+            .share-btn{
+                margin-left: 10px;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                &:first-child{
+                    margin: 0;
+                }
+                i{
+                    font-size: 30px;
+                }
+            }
+            .whatsapp{
+                color: #128812;
+            }
+            .facebook{
+                color: blue;
+            }
+        }
+    }
+    #curtain{
+        display: none;
+        width: 100vw;
+        height: 100vh;    
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ffffff5d;
+    }
+}
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(../fonts/Roboto-Medium.ttf);
+    font-weight: bold;
+}
+
+@import "./header";
+@import "./sidebar";
+@import "./home";
+@import "./profile";
+@import "./book";
+@import "./profile-edit";

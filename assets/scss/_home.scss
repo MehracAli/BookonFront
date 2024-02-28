@@ -1,0 +1,218 @@
+a{
+    text-decoration: none;
+    color: black;
+    &:hover{
+        text-decoration:underline 1px;
+    }
+}
+#home{
+    width: 55%;
+    height: max-content;
+    #landing-nav{
+        font-size: 18px;
+        font-weight: 600;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(5px);
+        border-bottom: 1px solid #d4d4d4;
+        .landing-nav-item{
+            width: 50%;
+            height: 100%;
+            padding: 0 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+            cursor: pointer;
+            a{
+                text-decoration: none;
+                color: black;
+                i{
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+            }
+            &:hover{
+                background-color: #edf6ee;
+            }
+        }
+    }
+    #post-create{
+        height: 130px;
+        padding: 10px 20px;
+        border-bottom: 1px solid #d4d4d4;
+        #post-body{
+            height: 70px;
+            display: flex;
+            #owner{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+            #post-content{
+                width: 89%;
+                padding: 0 15px;
+                font-size: 20px;
+                outline: none;
+                border-bottom: 1px solid #d4d4d4;
+            }
+        }
+    }
+    #content{
+        .post{
+            width: 100%;
+            padding: 10px 10px;
+            border-top: 1px solid #128812;
+            border-bottom: 1px solid #128812;
+            .post-head{
+                width: 100%;
+                display: flex;
+                margin-bottom: 10px;
+                justify-content: space-between;
+                .post-owner{
+                    display: flex;
+                    align-items: center;
+                    .post-owner-img{
+                        width: 50px;
+                        height: 50px;
+                        overflow: hidden;
+                        margin-right: 15px;
+                        border-radius: 50%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .post-owner-info{
+                        .post-owner-name{
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        .post-owner-username{
+                            font-size: 14px;
+                            color: #128812;
+                        }
+                    }
+                }
+                .dots{
+                    cursor: pointer;
+                    position: relative;
+                    user-select: none;
+                    .dots-menu{
+                        width: max-content;
+                        padding: 10px;
+                        position: absolute;
+                        top: 20px;
+                        right: 0;
+                        background-color: white;
+                        border: #d4d4d4 1px solid;
+                        display: none;
+                        ul{
+                            font-size: 14px;
+                            padding: 0;
+                            margin: 0;
+                            list-style: none;
+                            
+                            li{
+                                padding: 5px 30px;
+                                margin-bottom: 5px;
+                                background-color: #edf6ee;
+                                border-radius: 5px;
+                                a{
+                                    width: 100%;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    i{
+                                        font-size: 16px;
+                                        margin-right: 5px;
+                                    }
+                                }
+
+                                &:last-child{
+                                    margin: 0;
+                                }
+                                &:hover{
+                                    background-color: #d4d4d4;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .post-body{
+                .paragraph{
+                    padding: 20px 15px;
+                    background-color: #edf6ee;
+                    p{
+                        margin: 0;
+                    }
+                }
+                .book-info{
+                    display: flex;
+                    padding: 10px 10px;
+                    .book-img{
+                        width: 30px;
+                        margin-right: 10px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .name-auth{
+                        font-size: 14px;
+                        .book-name{
+                            font-weight: bold;
+                        }
+                        .book-auth{
+
+                        }
+                    }
+                }
+            }
+            .post-foot{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 5px;
+                .post-foot-left{
+                    display: flex;
+                }
+                .post-foot-right{
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                .post-foot-item{
+                    border: none;
+                    padding: 5px 15px;
+                    display: flex;
+                    align-items: center;
+                    background-color: white;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #edf6ee;
+                    }
+                    i{
+                        display: inline;
+                        margin-right: 10px;
+                        font-size: 20px;
+                        transition: none;
+                    }
+                    span{
+                        transition: none;
+                        user-select: none;
+                    }
+                    .starred{
+                        display: none;
+                        color: goldenrod;
+                    }
+                }
+            }
+        }
+    }
+}
+

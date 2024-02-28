@@ -1,0 +1,101 @@
+#profile-edit{
+    z-index: 0;
+    width: 55%;
+    height: max-content;
+    #profile-info{
+        #info-top{
+            color: white;
+            position: relative;
+            #main-cover{
+                height: 200px;
+                background: url(/assets/images/user-profiles/ori-and-the-will-of-the-wisps-uhdpaper.com-4K-6.488.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #main-photo{
+                width: 150px;
+                height: 150px;
+                border: 2px solid #d4d4d4;
+                border-radius: 50%;
+                overflow: hidden;
+                position: absolute;
+                left: 30px;
+                bottom: -70px;
+                img{
+                    width: 100%;
+                }
+            }
+            #photo-change-cover{
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 45%;
+                top: 40%;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.5);
+                }
+            }
+            #photo-change-profile{
+                width: 30px;
+                height: 30px;
+                font-size: 10px;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 40%;
+                top: 40%;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.5);
+                }
+            }
+            .photo-change-input{
+                display: none;
+            }
+        }
+        #info-bottom{
+            h4{
+                font-weight: bolder;
+            }
+            padding: 100px 20px 30px;
+            .detail-item{
+                margin-bottom: 20px;
+                label{
+                    font-size: 16px;
+                    font-weight: bolder;
+                }
+                .detail-item-input{
+                    width: 100%;
+                    padding: 5px 10px; 
+                    border: #d4d4d4 solid 1px;
+                    border-radius: 5px;
+                    resize: none;
+                    &:focus{
+                        outline: 1px solid green;
+                    }
+                }
+            }
+            #profile-edit-submit{
+                display: flex;
+                justify-content: flex-end;
+                #profile-edit-submit-btn{
+                    color: white;
+                    padding: 5px 10px;
+                    background-color: green;
+                    border: none;
+                }
+            }
+        }
+    }
+}

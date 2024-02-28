@@ -1,0 +1,703 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: none;
+  transition: 0.2s;
+}
+* input[type=search]::-webkit-search-decoration,
+* input[type=search]::-webkit-search-cancel-button,
+* input[type=search]::-webkit-search-results-button,
+* input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+body {
+  position: relative;
+  background-color: #ffffff;
+}
+body #main {
+  width: 75%;
+  margin-left: 25%;
+  display: flex;
+}
+body #share-drop {
+  z-index: 2;
+  display: none;
+  width: max-content;
+  padding: 10px 20px;
+  border: #d4d4d4 solid 1px;
+  background-color: white;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+}
+body #share-drop #share-exit #share-exit-btn {
+  border: none;
+  background-color: white;
+  margin-bottom: 10px;
+}
+body #share-drop #share-link {
+  margin-bottom: 15px;
+}
+body #share-drop #share-link #share-link-input {
+  width: 350px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #edf6ee;
+}
+body #share-drop #share-link #copy-link-btn {
+  width: 50px;
+  padding: 5px 0;
+  color: white;
+  background-color: #128812;
+  border: none;
+  text-align: center;
+  transform: translateX(-5px);
+}
+body #share-drop #share-btns {
+  display: flex;
+}
+body #share-drop #share-btns .share-btn {
+  margin-left: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+body #share-drop #share-btns .share-btn:first-child {
+  margin: 0;
+}
+body #share-drop #share-btns .share-btn i {
+  font-size: 30px;
+}
+body #share-drop #share-btns .whatsapp {
+  color: #128812;
+}
+body #share-drop #share-btns .facebook {
+  color: blue;
+}
+body #curtain {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3647058824);
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url(../fonts/Roboto-Medium.ttf);
+  font-weight: bold;
+}
+#header {
+  z-index: 1;
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: white;
+  border-right: 1px solid #d4d4d4;
+}
+#header #header-wrapper {
+  width: max-content;
+  height: 100%;
+  padding: 20px 50px;
+}
+#header #header-wrapper #logo {
+  margin-bottom: 20px;
+}
+#header #header-wrapper #logo #logo-img {
+  width: 150px;
+}
+#header #header-wrapper #nav-bar {
+  height: 90%;
+  justify-content: space-between;
+}
+#header #header-wrapper #nav-bar .nav-item {
+  border-left: white 5px solid;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  transition: 0.1s;
+  cursor: pointer;
+  user-select: none;
+}
+#header #header-wrapper #nav-bar .nav-item:hover {
+  border-left: #128812 5px solid;
+}
+#header #header-wrapper #nav-bar .nav-item i {
+  margin-right: 10px;
+}
+#header #header-wrapper #nav-bar .nav-item #profile-img {
+  border: solid 1px #000000;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+}
+#header #header-wrapper #nav-bar .nav-item #profile-img img {
+  width: 100%;
+  height: 100%;
+}
+#header #header-wrapper #nav-bar .nav-item-active {
+  border-left: #128812 5px solid;
+}
+#header #header-wrapper #nav-bar .profile-nav-item {
+  padding-left: 5px;
+}
+#header #header-wrapper #nav-bar #create-nav {
+  position: relative;
+}
+#header #header-wrapper #nav-bar #create-nav #create-drop {
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  right: -180px;
+  top: 0;
+  background-color: white;
+  border: solid 1px #d4d4d4;
+  transition: display 0.3s ease-in-out;
+  cursor: context-menu;
+}
+#header #header-wrapper #nav-bar #create-nav #create-drop h6 {
+  text-align: center;
+  font-weight: bold;
+}
+#header #header-wrapper #nav-bar #create-nav #create-drop ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#header #header-wrapper #nav-bar #create-nav #create-drop ul li {
+  font-size: 18px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+#header #header-wrapper #nav-bar #create-nav #create-drop ul li:hover {
+  background-color: #edf6ee;
+}
+#header #header-wrapper #nav-bar #create-nav #create-drop ul li i {
+  margin-right: 5px;
+}
+#header #header-wrapper #nav-bar #create-nav #create-drop ul li a {
+  text-decoration: none;
+}
+
+#side-bar {
+  width: 45%;
+  height: 100vh;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid #d4d4d4;
+}
+#side-bar #side-bar-wrapper {
+  width: 70%;
+}
+#side-bar #side-bar-wrapper #search {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#side-bar #side-bar-wrapper #search #search-input {
+  width: 100%;
+  height: 70%;
+  padding: 0 30px;
+  outline: none;
+  border: none;
+  background-color: #edf6ee;
+  border-radius: 0px;
+}
+#side-bar #side-bar-wrapper #search #search-drop {
+  width: 100%;
+  background-color: white;
+  border: #d4d4d4 solid 1px;
+  position: absolute;
+  top: 85%;
+  left: 0;
+  display: none;
+  transition: 0.1s;
+}
+#side-bar #side-bar-wrapper #search #search-drop ul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+#side-bar #side-bar-wrapper #search #search-drop ul li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+#side-bar #side-bar-wrapper #search #search-drop ul li:hover {
+  background-color: #d4d4d4;
+}
+#side-bar #side-bar-wrapper #search i {
+  position: absolute;
+  left: 10px;
+}
+#side-bar #side-bar-wrapper #tags {
+  width: 100%;
+  height: max-content;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+#side-bar #side-bar-wrapper #tags ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#side-bar #side-bar-wrapper #tags ul li {
+  padding: 10px 20px;
+  background-color: #edf6ee;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#side-bar #side-bar-wrapper #tags ul li:hover {
+  background-color: #ececec;
+}
+#side-bar #side-bar-wrapper #tags ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline 1px;
+}
+
+#home {
+  width: 55%;
+  height: max-content;
+}
+#home #landing-nav {
+  font-size: 18px;
+  font-weight: 600;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #d4d4d4;
+}
+#home #landing-nav .landing-nav-item {
+  width: 50%;
+  height: 100%;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+#home #landing-nav .landing-nav-item a {
+  text-decoration: none;
+  color: black;
+}
+#home #landing-nav .landing-nav-item a i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+#home #landing-nav .landing-nav-item:hover {
+  background-color: #edf6ee;
+}
+#home #post-create {
+  height: 130px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #d4d4d4;
+}
+#home #post-create #post-body {
+  height: 70px;
+  display: flex;
+}
+#home #post-create #post-body #owner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#home #post-create #post-body #owner img {
+  width: 100%;
+}
+#home #post-create #post-body #post-content {
+  width: 89%;
+  padding: 0 15px;
+  font-size: 20px;
+  outline: none;
+  border-bottom: 1px solid #d4d4d4;
+}
+#home #content .post {
+  width: 100%;
+  padding: 10px 10px;
+  border-top: 1px solid #128812;
+  border-bottom: 1px solid #128812;
+}
+#home #content .post .post-head {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+#home #content .post .post-head .post-owner {
+  display: flex;
+  align-items: center;
+}
+#home #content .post .post-head .post-owner .post-owner-img {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+#home #content .post .post-head .post-owner .post-owner-img img {
+  width: 100%;
+}
+#home #content .post .post-head .post-owner .post-owner-info .post-owner-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+#home #content .post .post-head .post-owner .post-owner-info .post-owner-username {
+  font-size: 14px;
+  color: #128812;
+}
+#home #content .post .post-head .dots {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+#home #content .post .post-head .dots .dots-menu {
+  width: max-content;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background-color: white;
+  border: #d4d4d4 1px solid;
+  display: none;
+}
+#home #content .post .post-head .dots .dots-menu ul {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#home #content .post .post-head .dots .dots-menu ul li {
+  padding: 5px 30px;
+  margin-bottom: 5px;
+  background-color: #edf6ee;
+  border-radius: 5px;
+}
+#home #content .post .post-head .dots .dots-menu ul li a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+#home #content .post .post-head .dots .dots-menu ul li a i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+#home #content .post .post-head .dots .dots-menu ul li:last-child {
+  margin: 0;
+}
+#home #content .post .post-head .dots .dots-menu ul li:hover {
+  background-color: #d4d4d4;
+}
+#home #content .post .post-body .paragraph {
+  padding: 20px 15px;
+  background-color: #edf6ee;
+}
+#home #content .post .post-body .paragraph p {
+  margin: 0;
+}
+#home #content .post .post-body .book-info {
+  display: flex;
+  padding: 10px 10px;
+}
+#home #content .post .post-body .book-info .book-img {
+  width: 30px;
+  margin-right: 10px;
+}
+#home #content .post .post-body .book-info .book-img img {
+  width: 100%;
+}
+#home #content .post .post-body .book-info .name-auth {
+  font-size: 14px;
+}
+#home #content .post .post-body .book-info .name-auth .book-name {
+  font-weight: bold;
+}
+#home #content .post .post-foot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+#home #content .post .post-foot .post-foot-left {
+  display: flex;
+}
+#home #content .post .post-foot .post-foot-right {
+  display: flex;
+  justify-content: flex-end;
+}
+#home #content .post .post-foot .post-foot-item {
+  border: none;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+}
+#home #content .post .post-foot .post-foot-item:hover {
+  background-color: #edf6ee;
+}
+#home #content .post .post-foot .post-foot-item i {
+  display: inline;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: none;
+}
+#home #content .post .post-foot .post-foot-item span {
+  transition: none;
+  user-select: none;
+}
+#home #content .post .post-foot .post-foot-item .starred {
+  display: none;
+  color: goldenrod;
+}
+
+#profile {
+  z-index: 0;
+  width: 55%;
+  height: max-content;
+}
+#profile #profile-info #info-top {
+  position: relative;
+}
+#profile #profile-info #info-top #main-cover {
+  height: 200px;
+  background: url(/assets/images/user-profiles/ori-and-the-will-of-the-wisps-uhdpaper.com-4K-6.488.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#profile #profile-info #info-top #main-photo {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #d4d4d4;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 30px;
+  bottom: -70px;
+}
+#profile #profile-info #info-top #main-photo img {
+  width: 100%;
+}
+#profile #profile-info #info-bottom {
+  padding: 20px 20px;
+}
+#profile #profile-info #info-bottom #edit-profile {
+  display: flex;
+  justify-content: flex-end;
+}
+#profile #profile-info #info-bottom #edit-profile a {
+  padding: 5px 10px;
+  border: solid 1px #d4d4d4;
+  text-decoration: none;
+}
+#profile #profile-info #info-bottom #edit-profile a:hover {
+  background-color: #d4d4d4;
+}
+#profile #profile-info #info-bottom #fullname-username {
+  margin-top: 30px;
+}
+#profile #profile-info #info-bottom #fullname-username #fullname {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+}
+#profile #profile-info #info-bottom #fullname-username #fullname #username {
+  font-size: 16px;
+  font-weight: normal;
+  color: #128812;
+}
+#profile #profile-info #info-bottom #date-info {
+  margin-top: 15px;
+}
+#profile #profile-info #info-bottom #date-info .date-info-item {
+  font-size: 14px;
+  display: inline-block;
+  margin-right: 15px;
+}
+#profile #profile-info #info-bottom #date-info .date-info-item i {
+  margin-right: 5px;
+}
+#profile #profile-info #info-bottom #content-info {
+  margin-top: 10px;
+}
+#profile #profile-info #info-bottom #content-info .content-info-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+#profile #profile-info #info-bottom #content-info .content-info-item span {
+  font-weight: bold;
+  margin-right: 3px;
+}
+#profile #profile-info #profile-shares #shares-nav {
+  display: flex;
+  border-bottom: solid 1px #d4d4d4;
+}
+#profile #profile-info #profile-shares #shares-nav .shares-nav-item {
+  padding: 10px 20px;
+  color: gray;
+  font-weight: bolder;
+  background-color: white;
+  text-decoration: none;
+  text-decoration: none;
+  border-bottom: white solid 2px;
+}
+#profile #profile-info #profile-shares #shares-nav .shares-nav-item:hover {
+  color: black;
+  background-color: #edf6ee;
+}
+#profile #profile-info #profile-shares #shares-nav .shares-nav-item-active {
+  color: black;
+  border-bottom: #128812 solid 2px;
+}
+
+#book {
+  z-index: 0;
+  width: 55%;
+  height: max-content;
+}
+
+#profile-edit {
+  z-index: 0;
+  width: 55%;
+  height: max-content;
+}
+#profile-edit #profile-info #info-top {
+  color: white;
+  position: relative;
+}
+#profile-edit #profile-info #info-top #main-cover {
+  height: 200px;
+  background: url(/assets/images/user-profiles/ori-and-the-will-of-the-wisps-uhdpaper.com-4K-6.488.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#profile-edit #profile-info #info-top #main-photo {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #d4d4d4;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 30px;
+  bottom: -70px;
+}
+#profile-edit #profile-info #info-top #main-photo img {
+  width: 100%;
+}
+#profile-edit #profile-info #info-top #photo-change-cover {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  cursor: pointer;
+}
+#profile-edit #profile-info #info-top #photo-change-cover:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#profile-edit #profile-info #info-top #photo-change-profile {
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  cursor: pointer;
+}
+#profile-edit #profile-info #info-top #photo-change-profile:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#profile-edit #profile-info #info-top .photo-change-input {
+  display: none;
+}
+#profile-edit #profile-info #info-bottom {
+  padding: 100px 20px 30px;
+}
+#profile-edit #profile-info #info-bottom h4 {
+  font-weight: bolder;
+}
+#profile-edit #profile-info #info-bottom .detail-item {
+  margin-bottom: 20px;
+}
+#profile-edit #profile-info #info-bottom .detail-item label {
+  font-size: 16px;
+  font-weight: bolder;
+}
+#profile-edit #profile-info #info-bottom .detail-item .detail-item-input {
+  width: 100%;
+  padding: 5px 10px;
+  border: #d4d4d4 solid 1px;
+  border-radius: 5px;
+  resize: none;
+}
+#profile-edit #profile-info #info-bottom .detail-item .detail-item-input:focus {
+  outline: 1px solid green;
+}
+#profile-edit #profile-info #info-bottom #profile-edit-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+#profile-edit #profile-info #info-bottom #profile-edit-submit #profile-edit-submit-btn {
+  color: white;
+  padding: 5px 10px;
+  background-color: green;
+  border: none;
+}/*# sourceMappingURL=style.css.map */

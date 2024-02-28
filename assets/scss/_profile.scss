@@ -1,0 +1,103 @@
+#profile{
+    z-index: 0;
+    width: 55%;
+    height: max-content;
+    #profile-info{
+        #info-top{
+            position: relative;
+            #main-cover{
+                height: 200px;
+                background: url(/assets/images/user-profiles/ori-and-the-will-of-the-wisps-uhdpaper.com-4K-6.488.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #main-photo{
+                width: 150px;
+                height: 150px;
+                border: 2px solid #d4d4d4;
+                border-radius: 50%;
+                overflow: hidden;
+                position: absolute;
+                left: 30px;
+                bottom: -70px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        #info-bottom{
+            padding: 20px 20px;
+            #edit-profile{
+                display: flex;
+                justify-content: flex-end;
+                a{
+                    padding: 5px 10px;
+                    border: solid 1px #d4d4d4;
+                    text-decoration: none;
+                    &:hover{
+                        background-color: #d4d4d4;
+                    }
+                }
+            }
+            #fullname-username{
+                margin-top: 30px;
+                #fullname{
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 20px;
+                    #username{
+                        font-size: 16px;
+                        font-weight: normal;
+                        color: #128812;
+                    }
+                }
+            }
+            #date-info{
+                margin-top: 15px;
+                .date-info-item{
+                    font-size: 14px;
+                    display: inline-block;
+                    margin-right: 15px;
+                    i{
+                        margin-right: 5px;
+                    }
+                }
+            }
+            #content-info{
+                margin-top: 10px;
+                .content-info-item{
+                    display: inline-block;
+                    margin-right: 10px;
+                    span{
+                        font-weight: bold;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+        #profile-shares{
+            #shares-nav{
+                display: flex;
+                border-bottom: solid 1px #d4d4d4;
+                .shares-nav-item{
+                    padding: 10px 20px;
+                    color: gray;
+                    font-weight: bolder;
+                    background-color: white;
+                    text-decoration: none;
+                    text-decoration: none;
+                    border-bottom: white solid 2px;   
+                    &:hover{
+                        color: black;
+                        background-color: #edf6ee;
+                    }
+                }
+                .shares-nav-item-active{
+                    color: black;
+                    border-bottom: #128812 solid 2px;   
+                }
+            }
+        }
+    }
+}
