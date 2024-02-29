@@ -48,7 +48,7 @@ curtain.addEventListener('click', () => {
   curtain.style.display = 'none'
 })
 //Post Sharing Evens
-let postUrl = encodeURI(document.location.href+'id=1')
+let postUrl = encodeURI(document.location.href)
 let shareInput = document.getElementById("share-link-input")
 shareInput.value = postUrl
 
