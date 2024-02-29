@@ -436,7 +436,6 @@ a:hover {
 }
 #home #content .post .post-body .paragraph {
   padding: 20px 15px;
-  background-color: #edf6ee;
 }
 #home #content .post .post-body .paragraph p {
   margin: 0;
@@ -494,6 +493,12 @@ a:hover {
 #home #content .post .post-foot .post-foot-item .starred {
   display: none;
   color: goldenrod;
+}
+#home #content .quote-post .post-body .paragraph {
+  background-color: #edf6ee;
+}
+#home #content .review-post .post-body .paragraph {
+  background-color: #ececec;
 }
 
 #profile {

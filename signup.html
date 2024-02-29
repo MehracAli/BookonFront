@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookOn</title>
+    <link rel="stylesheet" type="text/css" href="./assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/stylesheet.css" />
+</head>
+<body>
+    <div id="main-wrapper" class="oxyy-login-register min-vh-100 d-flex flex-column bg-dark">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-md-9 col-lg-7 col-xl-6 mx-auto">
+                    <div class="bg-white p-4 pb-sm-5 px-sm-5">
+                        <div id="logo" style="width: 100%;display: flex; justify-content: center;margin-bottom: 30px;">
+                            <img src="./assets/images/header/bookon-logo.png" style="width: 150px;" alt="bookon-logo">
+                        </div>
+                        <div class="d-flex  flex-column align-items-center mb-2">
+                            <ul class="social-icons social-icons-lg">
+                                <li class="social-icons-facebook"><a href="#" data-bs-toggle="tooltip" data-bs-original-title="Sign Up with Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="social-icons-google"><a href="#" data-bs-toggle="tooltip" data-bs-original-title="Sign Up with Google"><i class="fab fa-google"></i></a></li>
+                            </ul>
+                        </div>
+                        <p class="text-1 text-muted text-center text-uppercase">or</p>
+                        <form id="registerForm" method="post">
+                            <div class="mb-3 icon-group">
+                                <input type="text" class="form-control rounded-0" id="fullName" required placeholder="Full Name">
+                                <span class="icon-inside"><i class="fas fa-user"></i></span> </div>
+                            <div class="mb-3 icon-group">
+                                <input type="email" class="form-control rounded-0" id="emailAddress" required placeholder="Email Address">
+                                <span class="icon-inside"><i class="fas fa-envelope"></i></span> </div>
+                            <div class="mb-3 icon-group">
+                                <input type="password" class="form-control rounded-0" id="loginPassword" required placeholder="Password">
+                                <span class="icon-inside"><i class="fas fa-lock"></i></span> </div>
+                            <div class="form-check my-4">
+                                <input id="agree" name="agree" class="form-check-input rounded-0" type="checkbox">
+                                <label class="form-check-label text-2" for="agree">I agree to the <a href="#"><u>Terms</u></a> and <a href="#"><u>Privacy Policy</u></a>.</label>
+                            </div>
+                            <div class="d-grid my-4">
+                                <button class="btn btn-primary rounded-0 shadow-none" type="submit">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                    <p class="text-center my-4"><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="signin.html">Already a member? - Log in now!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/vendor/jquery/jquery.min.js"></script>
+<script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</html>

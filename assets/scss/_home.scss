@@ -149,7 +149,6 @@ a{
             .post-body{
                 .paragraph{
                     padding: 20px 15px;
-                    background-color: #edf6ee;
                     p{
                         margin: 0;
                     }
@@ -210,6 +209,20 @@ a{
                         display: none;
                         color: goldenrod;
                     }
+                }
+            }
+        }
+        .quote-post{
+            .post-body{
+                .paragraph{
+                    background-color: #edf6ee;
+                }
+            }
+        }
+        .review-post{
+            .post-body{
+                .paragraph{
+                    background-color: #ececec;
                 }
             }
         }
