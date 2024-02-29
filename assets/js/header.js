@@ -10,5 +10,12 @@ document.addEventListener('click', () => {
     createDrop.style.display = 'none';
 })
 
+// let navItem = document.querySelectorAll(".nav-item")
+
+// navItem.forEach(ni => {
+//     ni.addEventListener('click', () => {
+//         ni.classList.add('nav-item-active')
+//     })
+// })
 
 
