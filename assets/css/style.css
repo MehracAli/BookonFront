@@ -435,10 +435,21 @@ a:hover {
   background-color: #d4d4d4;
 }
 #home #content .post .post-body .paragraph {
+  position: relative;
   padding: 20px 15px;
 }
 #home #content .post .post-body .paragraph p {
   margin: 0;
+}
+#home #content .post .post-body .paragraph .paragraph-btn {
+  float: right;
+  border: none;
+  background: transparent;
+  padding: 10px 10px;
+  color: green;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 #home #content .post .post-body .book-info {
   display: flex;

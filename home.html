@@ -223,7 +223,7 @@
                     </div>
                     <div class="post-body">
                         <div class="paragraph">
-                            <p>
+                            <p class="post-content">
                                 İnsan, yaradılışı gereği, musibetler karşısında zayıf ve âcizdir. Basit bir kederle bile baş dönmesi yaşar. Küçük bir gam karşısında sersemleşir. Bir mikroba mağlup olan bedeni gibi ruhu da basit bir mesele karşısında sarsıntılar geçirir. Yaşam gidişatındaki ufak bir aksaklıktan ümitsizliğe düşer. Gerçekleşme işareti taşımayan zayıf olasılıklardan telaşa kapıldığı dahi olur. Önemsiz bir mevzuda hayal kırıklığına uğradığında hayat ona tümden acı görünür. Dünya sık sık ona dar gelir, pek çok defa zindan gibi olur.
 
                                 İnsan, hissiyatını kontrol edebilme konusunda zayıftır. Nefsinin arzularını gemlemede âcizdir. Kalp dinginliğini sağlamada çoğu zaman yetersizdir. Kendi düşüncelerine karşı bile mağluptur. Aklının bir mutluluğa onlarca acı karıştırmasından yakasını bir türlü kurtaramaz. Yaşamın en kırılgan varlığı olan insanın hâletiruhiyesinin hangi hikmetler için böyle mukavemetsiz yaratıldığı, üzerinde tefekkür etmeye değer bir konudur.
@@ -232,6 +232,8 @@
 
                                 Doğu’nun ve Batı’nın kadim tesellilerini aktarmaya devam eden Dervişin Teselli Koleksiyonu, üçüncü kitapta Sufilerin Mutluluk Sanatını merkeze alıyor.
                             </p>
+                            <button class="paragraph-btn" onclick="ReadAll(this)">Read More</button>
+                            <button class="paragraph-btn d-none" onclick="ShowLess(this)">Show Less</button>
                         </div>
                         <div class="book-info">
                             <div class="book-img">
@@ -326,6 +328,7 @@
     </div>
     <div id="curtain"></div>
 </body>
+
 <script src="./assets/js/header.js"></script>
 <script src="./assets/js/sidabar.js"></script>
 <script src="./assets/js/post.js"></script>

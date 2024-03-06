@@ -148,9 +148,20 @@ a{
             }
             .post-body{
                 .paragraph{
+                    position: relative;
                     padding: 20px 15px;
                     p{
                         margin: 0;
+                    }
+                    .paragraph-btn{
+                        float: right;
+                        border:  none;
+                        background: transparent;
+                        padding: 10px 10px;
+                        color: green;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
                     }
                 }
                 .book-info{

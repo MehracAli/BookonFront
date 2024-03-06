@@ -75,3 +75,19 @@ whatsappBtns.forEach(wb => {
 })
 
 
+
+let paragraphs = document.querySelectorAll('.paragraph')
+paragraphs.forEach(p => {
+  let paragraph = p.firstElementChild
+  paragraph.innerHTML = paragraph.innerHTML.substring(0, 500)+'...'
+})
+
+function ReadAll(readAllBtn){
+  readAllBtn.classList.add('d-none')
+  readAllBtn.nextElementSibling.classList.remove('d-none')
+}
+
+function ShowLess(showLessBtn){
+  showLessBtn.classList.add('d-none')
+  showLessBtn.previousElementSibling.classList.remove('d-none')
+}
